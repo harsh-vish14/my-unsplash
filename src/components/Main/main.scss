@@ -1,0 +1,87 @@
+.my-masonry-grid {
+     display: -webkit-box;
+     /* Not needed if autoprefixing */
+     display: -ms-flexbox;
+     /* Not needed if autoprefixing */
+     display: flex;
+     // margin-left: -30px;
+     /* gutter size offset */
+     width: auto;
+     margin: 0%;
+     margin-top: 20px;
+     justify-content: center;
+     // align-items: center;
+     
+}
+
+.my-masonry-grid_column {
+     padding-left: 15px;
+     padding-right: 15px;
+
+     /* gutter size */
+     background-clip: padding-box;
+}
+.image{
+     transition: .4s;
+     opacity: 100%;
+}
+/* Style your items */
+.my-masonry-grid_column>div {
+     border-radius: 10px;
+     /* change div to reference your elements you put in <Masonry> */
+     background:  rgb(0, 0, 0);
+     position: relative;
+     margin-bottom: 20px;
+     
+     
+     &:hover{
+          .title{
+               transition: .4s;
+               opacity: 100%;
+          }
+          .image{
+               transition: .4s;
+               opacity: 30%;
+          }
+          .delete-btn{
+               // opacity: 100%;
+               display: inline-flex;
+               // display: block;
+               
+          }
+     }
+}
+.title{
+     transition: .4s;
+     opacity: 0%;
+     position: absolute;
+     bottom: 10px;
+     font-weight: 700;
+     color: aliceblue;
+     text-transform: capitalize;
+     left: 10px;
+}
+.delete-btn {
+     // opacity: 0%;
+     border: 2px solid #e40017;
+     border-radius: 5px;
+     position: absolute;
+     
+     display: none;
+     
+     font-size: 15px;
+     top: 10px;
+     right: 10px;
+     color: #e40017;
+     padding: 3px;
+     cursor:pointer;
+     opacity: 90%;
+     .delete-icon{
+          font-size: 20px;
+     }
+     &:hover{
+          background-color: #e40017;
+          color:white;
+          box-shadow:-2px -2px 10px #e40017;
+     }
+}

@@ -23,9 +23,10 @@
 }
 .image{
      transition: .4s;
+     
 }
 /* Style your items */
-.my-masonry-grid_column>div {
+.image-box {
      border-radius: 10px;
      /* change div to reference your elements you put in <Masonry> */
      background:  rgb(0, 0, 0);
@@ -57,12 +58,10 @@
      left: 10px;
 }
 .delete-btn {
-     // opacity: 0%;
+     opacity: 0%;
      border: 2px solid #e40017;
      border-radius: 5px;
      position: absolute;
-     
-     display: none;
      
      font-size: 15px;
      top: 10px;

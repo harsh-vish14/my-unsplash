@@ -14,7 +14,7 @@ const Main = () => {
         576: 1,
     };
     
-    const [correctPassword, setCorrectPassword] = useState(false);
+    
     const [user, setuser] = useContext(UserContext).user;
     const [password, setPassword] = useState('');
     const fetchingData = async () => {
@@ -46,16 +46,20 @@ const Main = () => {
             user.map((image, i) => {
                 if (image) {
                 return (
-                    <div key={i} id={i} className='image-box' >
-                        <img src={image.url} alt={image.title} className='image' style={{ width: '100%', borderRadius: '10px' }} />
-                        <div className='title'>
+                    <>
+                        
+                        <div key={i} id={i} className='image-box' >
+                            <img src={image.url} alt={image.title} className='image' style={{ width: '100%', borderRadius: '10px' }} />
+                        <div className='title' style={{opacity:'100%'}}>
                             {image.title}
                         </div>
-                        <div className='delete-btn' onClick={() => deleteIt(i)} data-bs-toggle="modal" data-bs-target={`#Modal${i}`}>
+                        <div className='delete-btn' onClick={() => deleteIt(i)} data-bs-toggle="modal" data-bs-target={`#Modal${i}`} style={{opacity:'100%'}}>
                             <MdDeleteForever className='delete-icon' />
                             <div className='delete-text' >Delete</div>
                         </div>
                         
+                    </div>
+                    
                         <div className="modal fade" id={`Modal${i}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div className="modal-dialog">
                                 <div className="modal-content">
@@ -69,7 +73,7 @@ const Main = () => {
                                             <input type="password" className="form-control" id="floatingPassword" placeholder="Password" name='password' required onChange={handelChanged} value={password} />
                                             <label htmlFor="floatingPassword">Password</label>
                                         </div>
-                                        {correctPassword?(<div style={{color: 'red'}}>Invalid Password</div>):(null)}
+                                        
                                     </div>
                                     <div class="modal-footer">
                                         <div type="button"  data-bs-dismiss="modal" >cancel</div>
@@ -78,7 +82,7 @@ const Main = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </>
                 )
             }else{
                
@@ -95,6 +99,7 @@ const Main = () => {
             fetch(`https://peaceful-eyrie-75408.herokuapp.com/images/${id}`,
                 {
                     method: 'DELETE',
+                    
                     headers: {
                         "Content-type": "application/json; charset=UTF-8"
                     }
@@ -104,11 +109,8 @@ const Main = () => {
                     return i != id
                 }
             })
-            fetchingData()
             setuser(newimages);
             setPassword('')
-        } else {
-            setCorrectPassword(true)
         }
         fetchingData();
     };

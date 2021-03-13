@@ -31,22 +31,11 @@
      background:  rgb(0, 0, 0);
      position: relative;
      margin-bottom: 20px;
-     &:hover{
-          .title{
-               transition: .4s;
-               opacity: 100%;
-          }
-          .delete-btn{
-               opacity: 100%;
-               display: inline-flex;
-               // display: block;
-               
-          }
-     }
+     
 }
 .title{
      transition: .4s;
-     opacity: 0%;
+     opacity: 100%;
      position: absolute;
      bottom: 10px;
      font-weight: 700;
@@ -66,7 +55,7 @@
      color: #e40017;
      padding: 3px;
      cursor:pointer;
-     opacity: 90%;
+     
      .delete-icon{
           font-size: 20px;
      }
@@ -75,5 +64,5 @@
           color:white;
           box-shadow:-2px -2px 10px #e40017;
      }
-     opacity: 0%;
+     opacity: 100%;
 }

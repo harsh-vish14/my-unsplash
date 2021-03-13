@@ -30,13 +30,14 @@ const Model = () => {
             fetch('https://peaceful-eyrie-75408.herokuapp.com/uploadImage',
             {
                 method: 'POST',
+                
                 body: JSON.stringify({
                     title: inputs.title,
                     url: inputs.url,
                     password: inputs.password
                 }),
                 headers: {
-                     "Content-type": "application/json; charset=UTF-8"
+                    "Content-type": "application/json; charset=UTF-8"
                 },
                 
             }).then((res) => { return res.json() })

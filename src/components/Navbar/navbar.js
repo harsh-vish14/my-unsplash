@@ -30,7 +30,6 @@ const Navbar = () => {
         if (!searchTerm) {
             fetchingData()
         } else {
-            
             setuser(results);
         }
     }, [searchTerm]);

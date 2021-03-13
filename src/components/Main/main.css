@@ -34,23 +34,10 @@
   margin-bottom: 20px;
 }
 
-.image-box:hover .title {
-  -webkit-transition: .4s;
-  transition: .4s;
-  opacity: 100%;
-}
-
-.image-box:hover .delete-btn {
-  opacity: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .title {
   -webkit-transition: .4s;
   transition: .4s;
-  opacity: 0%;
+  opacity: 100%;
   position: absolute;
   bottom: 10px;
   font-weight: 700;
@@ -72,8 +59,7 @@
   color: #e40017;
   padding: 3px;
   cursor: pointer;
-  opacity: 90%;
-  opacity: 0%;
+  opacity: 100%;
 }
 
 .delete-btn .delete-icon {

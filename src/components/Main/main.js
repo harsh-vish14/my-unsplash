@@ -47,7 +47,7 @@ const Main = () => {
                 if (image) {
                 return (
                     <div key={i} id={i} className='image-box' >
-                        <img src={image.url} alt={image.title} className='image' style={{ width: '100%', borderRadius: '10px' }} />
+                        
                         <div className='title'>
                             {image.title}
                         </div>
@@ -55,6 +55,7 @@ const Main = () => {
                             <MdDeleteForever className='delete-icon' />
                             <div className='delete-text' >Delete</div>
                         </div>
+                        <img src={image.url} alt={image.title} className='image' style={{ width: '100%', borderRadius: '10px' }} />
                         <div className="modal fade" id={`Modal${i}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div className="modal-dialog">
                                 <div className="modal-content">

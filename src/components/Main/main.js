@@ -18,7 +18,7 @@ const Main = () => {
     const [user, setuser] = useContext(UserContext).user;
     const [password, setPassword] = useState('');
     const fetchingData = async () => {
-        await fetch('/allImages')
+        await fetch('https://peaceful-eyrie-75408.herokuapp.com/allImages')
             .then((res) => {
                 return res.json()
             })
@@ -91,7 +91,7 @@ const Main = () => {
 
     const deleteIt = (id) => {
         if (password === user[id].password) {
-            fetch(`/images/${id}`,
+            fetch(`https://peaceful-eyrie-75408.herokuapp.com/images/${id}`,
                 {
                     method: 'DELETE',
                     headers: {

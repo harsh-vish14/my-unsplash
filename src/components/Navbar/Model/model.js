@@ -27,7 +27,7 @@ const Model = () => {
 
     const submitForm = () => {
         if (inputs.title !== '' && inputs.url !== '' && inputs.password !== '') {
-            fetch('uploadImage',
+            fetch('https://peaceful-eyrie-75408.herokuapp.com/uploadImage',
             {
                 method: 'POST',
                 body: JSON.stringify({

@@ -10,7 +10,7 @@ const Navbar = () => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const fetchingData = async () => {
-        await fetch('/allImages')
+        await fetch('https://peaceful-eyrie-75408.herokuapp.com/allImages')
             .then((res) => {
                 return res.json()
             })

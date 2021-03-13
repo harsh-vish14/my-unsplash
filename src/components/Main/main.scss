@@ -32,8 +32,6 @@
      background:  rgb(0, 0, 0);
      position: relative;
      margin-bottom: 20px;
-     
-     
      &:hover{
           .title{
                transition: .4s;
@@ -58,11 +56,11 @@
      left: 10px;
 }
 .delete-btn {
-     opacity: 0%;
+     
      border: 2px solid #e40017;
      border-radius: 5px;
      position: absolute;
-     
+     display: flex;
      font-size: 15px;
      top: 10px;
      right: 10px;
@@ -78,4 +76,5 @@
           color:white;
           box-shadow:-2px -2px 10px #e40017;
      }
+     opacity: 0%;
 }

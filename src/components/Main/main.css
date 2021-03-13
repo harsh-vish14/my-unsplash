@@ -60,10 +60,12 @@
 }
 
 .delete-btn {
-  opacity: 0%;
   border: 2px solid #e40017;
   border-radius: 5px;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 15px;
   top: 10px;
   right: 10px;
@@ -71,6 +73,7 @@
   padding: 3px;
   cursor: pointer;
   opacity: 90%;
+  opacity: 0%;
 }
 
 .delete-btn .delete-icon {
